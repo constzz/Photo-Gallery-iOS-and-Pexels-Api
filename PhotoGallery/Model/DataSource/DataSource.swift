@@ -37,7 +37,6 @@ class DataSource: DataSourceProtocol {
                 switch result {
                 case .success(let photos):
                     completion(.success(photos))
-                    self?.userDefaults.set(false ,forKey: K.UserDefaultsKeys.hasPhotosCached)
                     if searchQuery.isBlank {
                         self?.localStorage.cachePhotos(photos: Array(photos[0...K.photosAmountDataToSaveInCache]))
                     }
