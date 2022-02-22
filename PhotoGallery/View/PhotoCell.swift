@@ -52,7 +52,8 @@ class PhotoCell: UICollectionViewCell {
     private func makePhotoImageView(url: URL? = nil) -> UIImageView {
         let imageView =  UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }
 }
