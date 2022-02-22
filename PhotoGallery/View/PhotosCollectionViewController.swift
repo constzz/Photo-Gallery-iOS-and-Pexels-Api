@@ -23,14 +23,16 @@ class PhotosCollectionViewController: UICollectionViewController {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: Deinitializer
     deinit {
         photosViewModel.error.remove(observer: self)
         photosViewModel.photos.remove(observer: self)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     //MARK: Overrides
     override func viewDidLoad() {
@@ -95,14 +97,29 @@ extension PhotosCollectionViewController: CollectionViewWaterfallLayoutDelegate 
         return CGSize(width: width, height: width)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseId, for: indexPath) as! PhotoCell
+        if let photo = photos?[indexPath.item] {
+            cell.photo = photo
+        }
+        return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos?.count ?? 0
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-        
-        
         guard let selectedPhoto = photos?[indexPath.row],
-            selectedPhoto.isDataCached == false else {
-                return nil
-            }
+              let stringUrl = selectedPhoto.src?.original,
+              let imageUrl = URL(string: stringUrl) else {
+                  return nil
+              }
+        let photoPreviewProvider = PhotoPreviewProvider(imageUrl: imageUrl)
         
+        func photoPreview() -> UIViewController {
+            return photoPreviewProvider
+        }
         func shareImage(image: UIImage?) {
             guard let image = image else {
                 print("Image in conetext menu is nil. Nothing to share.")
@@ -111,75 +128,41 @@ extension PhotosCollectionViewController: CollectionViewWaterfallLayoutDelegate 
             let ac = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             present(ac, animated: true)
         }
-        
         func saveImage(image: UIImage?) {
             guard let image = image else {
                 print("Image in conetext menu is nil. Nothing to save.")
                 return
             }
-            ImageSaver().writeToPhotoAlbum(image: image)
+            ImageGallerySaver().writeToPhotoAlbum(image: image)
         }
         
-        var url: String?
-
-        url = selectedPhoto.src?.original
-        
-        guard let url = url else {
-            return nil
-        }
- 
-        let photoPreviewProvider = PhotoPreviewProvider(imageUrl: URL(string: url)!)
-        
-        func photoPreview() -> UIViewController {
-            return photoPreviewProvider
-        }
-        
-        let shareButton = UIAction(
-            title: "Share",
+        let shareButton = UIAction(title: "Share",
             image: UIImage(systemName: "square.and.arrow.up"),
-            identifier: nil,
-            discoverabilityTitle: nil,
             state: (photoPreviewProvider.image == nil) ? .off : .on
         ) { _ in
             shareImage(image: photoPreviewProvider.image)
         }
-        
         let saveButton = UIAction(
             title: "Save to gallery",
             image: UIImage(systemName: "square.and.arrow.down"),
-            identifier: nil,
-            discoverabilityTitle: nil,
             state: (photoPreviewProvider.image == nil) ? .off : .on
         ) { _ in
             saveImage(image: photoPreviewProvider.image)
         }
         
-        let configuration = UIContextMenuConfiguration(
+        return UIContextMenuConfiguration(
             identifier: nil,
             previewProvider: photoPreview,
             actionProvider: { (_: [UIMenuElement]) -> UIMenu in
                 return UIMenu(
-                    title: "",
-                    subtitle: nil,
-                    image: nil,
                     identifier: .share,
                     options: .displayInline,
                     children: [shareButton, saveButton]
                 )
             }
         )
-        
-        return configuration
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseId, for: indexPath) as! PhotoCell
-        cell.photo = photos?[indexPath.item]
-        return cell
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos?.count ?? 0
     }
     
 }
+
+
