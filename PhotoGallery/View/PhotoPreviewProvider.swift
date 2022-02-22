@@ -3,9 +3,10 @@ import UIKit
 class PhotoPreviewProvider: UIViewController {
     
     private let imageUrl: URL
+    private(set) var image: UIImage?
+    
     private let imageView = UIImageView()
     private let activityIndicator = UIActivityIndicatorView(style: .large)
-    var image: UIImage?
     
     init(imageUrl: URL) {
         self.imageUrl = imageUrl
