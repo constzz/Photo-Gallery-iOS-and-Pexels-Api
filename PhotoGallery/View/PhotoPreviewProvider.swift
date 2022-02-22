@@ -12,15 +12,15 @@ class PhotoPreviewProvider: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
         setupAutolayout()
         setupSubviews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func addSubviews(){
@@ -46,7 +46,7 @@ class PhotoPreviewProvider: UIViewController {
         activityIndicator.startAnimating()
         imageView.sd_setImage(with: imageUrl, completed: { [weak self] downloadedImage, error,_,_ in
                 if let error = error {
-                    print(error.localizedDescription)
+                    print("Sd web image error for PhotoPreviewProvider:" + error.localizedDescription)
                     return
                 }
                 self?.activityIndicator.stopAnimating()
