@@ -16,7 +16,7 @@ class LocalDataSource: LocalDataSourceProtocol {
     }
     
     func cachePhotos(photos: [Photo]) {
-        databaseQueue.sync {
+        databaseQueue.async {
             do {
                 let realm = try Realm()
                 if realm.isInWriteTransaction {
