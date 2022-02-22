@@ -11,9 +11,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     private var photosViewModel: PhotosViewModel
     private var photos: Array<Photo>? {
         didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            self.collectionView.reloadData()
         }
     }
     
