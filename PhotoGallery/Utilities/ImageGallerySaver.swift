@@ -1,6 +1,6 @@
 import UIKit
 
-class ImageSaver: NSObject {
+class ImageGallerySaver: NSObject {
     func writeToPhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
     }
