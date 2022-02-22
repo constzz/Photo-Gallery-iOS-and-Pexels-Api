@@ -8,8 +8,8 @@ class PhotoCell: UICollectionViewCell {
     //MARK: Properties
     var photo: Photo! {
         didSet {
-            var photoUrl = photo.src?.medium ?? ""
-            if let url = URL(string: photoUrl) {
+            if let photoUrl = photo.src?.medium,
+               let url = URL(string: photoUrl) {
                 photoImageView.sd_setImage(with: url, completed: {_, error,_,_ in
                         if let error = error {
                             print("Sd web image error for PhotoCell:" + error.localizedDescription)
