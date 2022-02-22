@@ -20,17 +20,17 @@ class PhotosData: Codable {
 
 // MARK: - Photo
 class Photo: Object, Codable {
-    @Persisted var id: Int
-    @Persisted var width: Int
-    @Persisted var height: Int
-    @Persisted var url: String
-    @Persisted var photographer: String
-    @Persisted var photographerURL: String
-    @Persisted var photographerID: Int
-    @Persisted var avgColor: String
+    var id: Int
+    var width: Int
+    var height: Int
+    var url: String
+    var photographer: String
+    var photographerURL: String
+    var photographerID: Int
+    var avgColor: String
     @Persisted var src: Src?
-    @Persisted var liked: Bool
-    @Persisted var alt: String
+    var liked: Bool
+    var alt: String
     var isDataCached: Bool = false
 
     enum CodingKeys: String, CodingKey {
@@ -46,7 +46,7 @@ class Photo: Object, Codable {
 class Src: Object, Codable {
     @Persisted var original: String
     var large2X: String
-    @Persisted var large: String
+    var large: String
     @Persisted var medium: String
     var small: String
     var portrait: String
