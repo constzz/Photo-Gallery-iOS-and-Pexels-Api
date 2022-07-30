@@ -1,5 +1,5 @@
 import UIKit
-import CollectionViewWaterfallLayout
+import CHTCollectionViewWaterfallLayout
 import Toast
 
 class PhotosCollectionViewController: UICollectionViewController {
@@ -88,9 +88,9 @@ extension PhotosCollectionViewController: UISearchBarDelegate {
 }
 
 //MARK: UICollectionViewDelegate, CollectionViewDataSource
-extension PhotosCollectionViewController: CollectionViewWaterfallLayoutDelegate {
+extension PhotosCollectionViewController: CHTCollectionViewDelegateWaterfallLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width / CGFloat(itemsInRow) - CGFloat(10)
         return CGSize(width: width, height: width)
     }
