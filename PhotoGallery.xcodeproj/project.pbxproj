@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32F7EE314F98A806263BDC2D /* Pods_PhotoGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA25DE60DEFCDABBC90E911 /* Pods_PhotoGallery.framework */; };
 		BB2D0CFB27B52593002BE188 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D0CFA27B52593002BE188 /* DependencyProvider.swift */; };
 		BB2D0D0127B53A17002BE188 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D0D0027B53A17002BE188 /* PhotosViewModel.swift */; };
 		BB2D0D0327B53A43002BE188 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D0D0227B53A43002BE188 /* Binding.swift */; };
+		BB6FB1E52894FE050017F138 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BB6FB1E42894FE050017F138 /* Realm */; };
+		BB6FB1E72894FE050017F138 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BB6FB1E62894FE050017F138 /* RealmSwift */; };
+		BB6FB1EA2894FEEE0017F138 /* CHTCollectionViewWaterfallLayout in Frameworks */ = {isa = PBXBuildFile; productRef = BB6FB1E92894FEEE0017F138 /* CHTCollectionViewWaterfallLayout */; };
+		BB6FB1ED2894FF790017F138 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BB6FB1EC2894FF790017F138 /* Toast */; };
 		BBE577C527AD64CB00F7DEF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE577C427AD64CB00F7DEF3 /* AppDelegate.swift */; };
 		BBE577C727AD64CB00F7DEF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE577C627AD64CB00F7DEF3 /* SceneDelegate.swift */; };
 		BBE577CE27AD64CD00F7DEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE577CD27AD64CD00F7DEF3 /* Assets.xcassets */; };
@@ -20,21 +23,16 @@
 		BBE577E527AEB48D00F7DEF3 /* PhotosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE577E427AEB48D00F7DEF3 /* PhotosData.swift */; };
 		BBE577E727AEFA9500F7DEF3 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE577E627AEFA9500F7DEF3 /* PhotoCell.swift */; };
 		BBE577EA27AEFDF800F7DEF3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = BBE577E927AEFDF800F7DEF3 /* SDWebImage */; };
-		BBE577ED27B14E0700F7DEF3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBE577EC27B14E0700F7DEF3 /* RealmSwift */; };
 		BBF63E6F27BF694D0071AE7A /* PhotoPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF63E6E27BF694D0071AE7A /* PhotoPreviewProvider.swift */; };
 		BBF63E7127BF6ECC0071AE7A /* ImageGallerySaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF63E7027BF6ECC0071AE7A /* ImageGallerySaver.swift */; };
 		BBF63E7427BF8D260071AE7A /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF63E7327BF8D250071AE7A /* K.swift */; };
 		BBF63E7627BF8D4D0071AE7A /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF63E7527BF8D4D0071AE7A /* DataSource.swift */; };
 		BBF63E7827BF8E140071AE7A /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF63E7727BF8E140071AE7A /* RemoteDataSource.swift */; };
 		BBF63E7A27BF90B90071AE7A /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF63E7927BF90B90071AE7A /* LocalDataSource.swift */; };
-		BBF63E7F27BFCC880071AE7A /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BBF63E7E27BFCC880071AE7A /* Toast */; };
 		BBF63E8427BFDB630071AE7A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF63E8327BFDB630071AE7A /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4FA25DE60DEFCDABBC90E911 /* Pods_PhotoGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6283AD8BF423C5AB563B357D /* Pods-PhotoGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.release.xcconfig"; path = "Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery.release.xcconfig"; sourceTree = "<group>"; };
-		69C43E8C3AA934241F8ACBF7 /* Pods-PhotoGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		BB2D0CFA27B52593002BE188 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		BB2D0D0027B53A17002BE188 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		BB2D0D0227B53A43002BE188 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
@@ -62,24 +60,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF63E7F27BFCC880071AE7A /* Toast in Frameworks */,
-				BBE577ED27B14E0700F7DEF3 /* RealmSwift in Frameworks */,
+				BB6FB1EA2894FEEE0017F138 /* CHTCollectionViewWaterfallLayout in Frameworks */,
+				BB6FB1E72894FE050017F138 /* RealmSwift in Frameworks */,
+				BB6FB1E52894FE050017F138 /* Realm in Frameworks */,
+				BB6FB1ED2894FF790017F138 /* Toast in Frameworks */,
 				BBE577EA27AEFDF800F7DEF3 /* SDWebImage in Frameworks */,
-				32F7EE314F98A806263BDC2D /* Pods_PhotoGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		46AD7607795391B6A081065D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4FA25DE60DEFCDABBC90E911 /* Pods_PhotoGallery.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BB2D0CFE27B529C2002BE188 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +104,6 @@
 			children = (
 				BBE577C327AD64CB00F7DEF3 /* PhotoGallery */,
 				BBE577C227AD64CB00F7DEF3 /* Products */,
-				E7EA31737C3C98CD0C8254F3 /* Pods */,
-				46AD7607795391B6A081065D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,15 +177,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E7EA31737C3C98CD0C8254F3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				69C43E8C3AA934241F8ACBF7 /* Pods-PhotoGallery.debug.xcconfig */,
-				6283AD8BF423C5AB563B357D /* Pods-PhotoGallery.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,11 +184,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBE577D527AD64CD00F7DEF3 /* Build configuration list for PBXNativeTarget "PhotoGallery" */;
 			buildPhases = (
-				62800A2B96C97804EE376C6B /* [CP] Check Pods Manifest.lock */,
 				BBE577BD27AD64CB00F7DEF3 /* Sources */,
 				BBE577BE27AD64CB00F7DEF3 /* Frameworks */,
 				BBE577BF27AD64CB00F7DEF3 /* Resources */,
-				077C1E1A4900BFE8B2E645F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,8 +195,10 @@
 			name = PhotoGallery;
 			packageProductDependencies = (
 				BBE577E927AEFDF800F7DEF3 /* SDWebImage */,
-				BBE577EC27B14E0700F7DEF3 /* RealmSwift */,
-				BBF63E7E27BFCC880071AE7A /* Toast */,
+				BB6FB1E42894FE050017F138 /* Realm */,
+				BB6FB1E62894FE050017F138 /* RealmSwift */,
+				BB6FB1E92894FEEE0017F138 /* CHTCollectionViewWaterfallLayout */,
+				BB6FB1EC2894FF790017F138 /* Toast */,
 			);
 			productName = PhotoGallery;
 			productReference = BBE577C127AD64CB00F7DEF3 /* PhotoGallery.app */;
@@ -250,8 +230,9 @@
 			mainGroup = BBE577B827AD64CB00F7DEF3;
 			packageReferences = (
 				BBE577E827AEFDF800F7DEF3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				BBE577EB27B14E0700F7DEF3 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				BBF63E7D27BFCC880071AE7A /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				BB6FB1E32894FE050017F138 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				BB6FB1E82894FEEE0017F138 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
+				BB6FB1EB2894FF790017F138 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = BBE577C227AD64CB00F7DEF3 /* Products */;
 			projectDirPath = "";
@@ -272,48 +253,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		077C1E1A4900BFE8B2E645F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62800A2B96C97804EE376C6B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PhotoGallery-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBE577BD27AD64CB00F7DEF3 /* Sources */ = {
@@ -463,7 +402,6 @@
 		};
 		BBE577D627AD64CD00F7DEF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69C43E8C3AA934241F8ACBF7 /* Pods-PhotoGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -491,7 +429,6 @@
 		};
 		BBE577D727AD64CD00F7DEF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6283AD8BF423C5AB563B357D /* Pods-PhotoGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -541,6 +478,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BB6FB1E32894FE050017F138 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		BB6FB1E82894FEEE0017F138 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chiahsien/CHTCollectionViewWaterfallLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.9;
+			};
+		};
+		BB6FB1EB2894FF790017F138 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		BBE577E827AEFDF800F7DEF3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -549,39 +510,33 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		BBE577EB27B14E0700F7DEF3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		BBF63E7D27BFCC880071AE7A /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/scalessec/Toast-Swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BB6FB1E42894FE050017F138 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6FB1E32894FE050017F138 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BB6FB1E62894FE050017F138 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6FB1E32894FE050017F138 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		BB6FB1E92894FEEE0017F138 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6FB1E82894FEEE0017F138 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */;
+			productName = CHTCollectionViewWaterfallLayout;
+		};
+		BB6FB1EC2894FF790017F138 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6FB1EB2894FF790017F138 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		BBE577E927AEFDF800F7DEF3 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBE577E827AEFDF800F7DEF3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
-		};
-		BBE577EC27B14E0700F7DEF3 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBE577EB27B14E0700F7DEF3 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		BBF63E7E27BFCC880071AE7A /* Toast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBF63E7D27BFCC880071AE7A /* XCRemoteSwiftPackageReference "Toast-Swift" */;
-			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

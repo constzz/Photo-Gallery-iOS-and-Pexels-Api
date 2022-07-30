@@ -1,34 +1,50 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "RealmDatabase",
-        "repositoryURL": "https://github.com/realm/realm-core",
-        "state": {
-          "branch": null,
-          "revision": "6b81f1a7a2d421f9e0b9e7f04e76bcf736a54409",
-          "version": "11.9.0"
-        }
-      },
-      {
-        "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-swift.git",
-        "state": {
-          "branch": "master",
-          "revision": "1c92fc222cd27e767b2a7f99ed786b58b5636f65",
-          "version": null
-        }
-      },
-      {
-        "package": "SDWebImage",
-        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
-        "state": {
-          "branch": null,
-          "revision": "2c53f531f1bedd253f55d85105409c28ed4a922c",
-          "version": "5.12.3"
-        }
+  "pins" : [
+    {
+      "identity" : "chtcollectionviewwaterfalllayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/chiahsien/CHTCollectionViewWaterfallLayout.git",
+      "state" : {
+        "revision" : "1fe42247efc8aea1ad03332d2b44f2d7fb1644bc",
+        "version" : "0.9.10"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "realm-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-core",
+      "state" : {
+        "revision" : "55a48c287b5e3a8ca129c257ec7e3b92bcb2a05f",
+        "version" : "12.3.0"
+      }
+    },
+    {
+      "identity" : "realm-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-swift.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "792c730c811c7c3e2da23e0d044c1584b0746b02"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "3e48cb68d8e668d146dc59c73fb98cb628616236",
+        "version" : "5.13.2"
+      }
+    },
+    {
+      "identity" : "toast-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scalessec/Toast-Swift",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0c9493eeacb102cc614da385cfaaf475379f4ab4"
+      }
+    }
+  ],
+  "version" : 2
 }
